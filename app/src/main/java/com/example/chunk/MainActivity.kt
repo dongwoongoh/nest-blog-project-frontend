@@ -22,13 +22,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Row(modifier = Modifier.padding(all = 8.dp)) {
-                Image(
-                    painter = painterResource(id = R.drawable.golang_char_2),
-                    contentDescription = ""
-                )
-                Column {
-                    PreViewMessageCard()
+            ChunkTheme(darkTheme = true, dynamicColor = true) {
+                Row(modifier = Modifier.padding(all = 8.dp)) {
+                    Image(
+                        painter = painterResource(id = R.drawable.golang_char_2),
+                        contentDescription = ""
+                    )
+                    Column {
+                        PreViewMessageCard()
+                    }
                 }
             }
         }
